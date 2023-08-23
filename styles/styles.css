@@ -1,0 +1,94 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #322b2b;
+  width: 100vw;
+}
+
+.title-wrapper {
+  font-size: 1.5rem;
+  color: antiquewhite;
+  margin: 0 0.5rem;
+}
+
+.cat-meme {
+  max-width: 25rem;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  border-radius: 10px;
+}
+
+.images-wrapper {
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.arrow {
+  border: solid #322b2b;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  translate: -1px -1px;
+}
+
+.arrow.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  translate: 1px -1px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.nav.left,
+.nav.right {
+  border: 0px;
+  height: 2rem;
+  width: 2rem;
+  margin: 0rem 0.5rem;
+}
+
+.nav.right:hover:not([class*="disabled-arrow"]),
+.nav.left:hover:not([class*="disabled-arrow"]),
+.nav.dot:hover,
+.active-dot {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.disabled-arrow {
+  opacity: 0.1;
+}
+
+.nav.left,
+.nav.right,
+.nav.dot {
+  border-radius: 50%;
+  background-color: antiquewhite;
+  transition: opacity 150ms ease-out;
+}
+
+.nav.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.25rem;
+}
+
+.nav.dots {
+  display: flex;
+  margin: 0.33rem 0.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
