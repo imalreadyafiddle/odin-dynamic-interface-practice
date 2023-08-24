@@ -18,6 +18,7 @@ body {
   max-width: 25rem;
   margin: 0.5rem 0.5rem 0rem 0.5rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .images-wrapper {
