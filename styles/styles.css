@@ -107,7 +107,7 @@ body {
   background-color: #000;
   padding-left: 10px;
   cursor: pointer;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
 }
 
 .dropdown-items {
@@ -130,18 +130,19 @@ body {
   padding: 5px 0px;
 }
 
-.dropdown-button:hover,
 .dropdown-items > a:hover {
-  opacity: 0.8;
-  border-radius: 5px 5px 0px 0px;
+  opacity: 0.5;
 }
 
-.dropdown-trigger:hover .dropdown-items,
-.dropdown-trigger:active .dropdown-items {
+.dropdown-trigger:hover .dropdown-items {
   transform: translateY(0%);
   opacity: 1;
   transition: transform 200ms ease-out, opacity 400ms ease-in;
   background-color: #000;
+}
+
+.dropdown-trigger:hover .dropdown-button {
+  border-radius: 5px 5px 0px 0px;
 }
 
 .dropdown-trigger {
