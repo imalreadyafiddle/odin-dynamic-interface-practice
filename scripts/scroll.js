@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // try using i == dots.length-1 instead of i != 9 and i == 9
   const toCheckIfHover = document.querySelector(".carousel-wrapper");
   setInterval(function () {
     if (!toCheckIfHover.matches(":hover")) {
