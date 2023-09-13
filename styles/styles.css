@@ -57,7 +57,8 @@ body {
 }
 
 .topping {
-  display: none;
+  height: 0;
+  opacity: 0;
   flex-direction: column;
   justify-content: flex-start;
   font-size: 1.2rem;
@@ -81,9 +82,13 @@ body {
   width: fit-content;
 }
 
-.topping:first-of-type > .topping-slice,
-.topping {
+.burger-wrapper:has(> .burger-icon > #hamburger-check:checked)
+  + .toppings
+  > .topping {
   display: flex;
+  height: auto;
+  opacity: 1;
+  transition: opacity 500ms;
 }
 
 .topping-slice > a {
@@ -243,6 +248,15 @@ a {
 
 ul {
   list-style: none;
+}
+
+#hamburger-check {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 22px;
+  left: -4px;
+  top: -4px;
 }
 
 @media only screen and (max-width: 1023px) {
